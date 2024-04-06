@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: Testing project
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/master.xml
+  datasource:
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/testing_spring
+    driver-class-name: com.mysql.cj.jdbc.Driver
